@@ -4,6 +4,23 @@ namespace HW3
 {
     public class HW3Arrays
     {
+        static int[] Generate_Array()
+        {
+            // Define the array
+            int[] randomValues = new int[10];
+            
+            // Initialize the random class
+            Random rand = new Random();
+            
+            // Assign random values to the array indices
+            for (int i = 0; i < randomValues.Length; i++)
+            {
+                randomValues[i] = rand.Next(0, 101); // Random number between 0 and 100
+            }
+
+            return randomValues;
+        }
+
         static void Print_Array(int[] randomValues)
         {
             Console.WriteLine("Random values:");
@@ -113,17 +130,8 @@ namespace HW3
 
         static void Main(string[] args)
         {
-            // Define the array
-            int[] randomValues = new int[10];
-            
-            // Initialize the random class
-            Random rand = new Random();
-            
-            // Assign random values to the array indices
-            for (int i = 0; i < randomValues.Length; i++)
-            {
-                randomValues[i] = rand.Next(0, 101); // Random number between 0 and 100
-            }
+            // Generate the Single-Dimensional Array
+            int[] randomValues = Generate_Array();
 
             // Start with the Single-Dimensional Array Demo:
             Console.WriteLine("BASIC ARRAY DEMO: \n");
