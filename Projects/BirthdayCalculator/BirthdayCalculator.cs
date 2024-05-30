@@ -180,16 +180,16 @@ namespace BirthdayCalc
     {
         static void Main(string[] args)
         {
+            // Print the opening message
+            Console.WriteLine("\nWelcome to the Birthday Calculator!\n");
+
             bool valid_date = false;
             while (!valid_date)
             {
                 try
                 {
-                    // Print the opening message
-                    Console.WriteLine("\nWelcome to the Birthday Calculator!\n");
-
                     // Have the user enter their birthday with their birth year, month, and day
-                    Console.Write("Please enter your birth year: ");
+                    Console.Write("\nPlease enter your birth year: ");
                     int year = int.Parse(Console.ReadLine());
 
                     Console.Write("Please enter your birth month: ");
@@ -233,10 +233,10 @@ namespace BirthdayCalc
                         Console.WriteLine("\nHere's your astrological information: ");
                         Console.WriteLine($"Western Zodiac Sign: {western_sign}");
                         Console.WriteLine($"Chinese Zodiac Sign: {chinese_sign}");
-                    }
 
-                    // End the loop once a valid date is entered
-                    valid_date = true;
+                        // End the loop
+                        valid_date = true;
+                    }
                 }
                 catch (Exception ex)
                 {
