@@ -65,14 +65,14 @@ namespace BirthdayCalc
             else if (result == -1)
             {
                 // If the user's entered birthday hasn't happened yet, explain it
-                string conclusion = "Sorry! This birthday is not possible. An individual with this birthday hasn't been born yet.";
+                string conclusion = "\nSorry! This birthday is not possible. An individual with this birthday hasn't been born yet.";
                 return conclusion;
             }
             else
             {
                 // If the user's age is too old, explain it
-                string error = "Sorry! This birthday is not possible. ";
-                string explanation = "This is age is older than humans can possibly live!";
+                string error = "\nSorry! This birthday is not possible. ";
+                string explanation = "This is age exceeds the maximum human life span!";
 
                 string conclusion = error + explanation;
                 return conclusion;
@@ -130,7 +130,7 @@ namespace BirthdayCalc
             { "Goat", 11 }
         };
 
-        private static bool IsDateInRange(DateTime date, DateTime startDate, DateTime endDate)
+        private static bool InDateRange(DateTime date, DateTime startDate, DateTime endDate)
         {
             if (startDate <= endDate)
             {
@@ -152,7 +152,7 @@ namespace BirthdayCalc
                 var startDate = new DateTime(DateTime.Now.Year, sign.Value[0], sign.Value[1]);
                 var endDate = new DateTime(DateTime.Now.Year, sign.Value[2], sign.Value[3]);
 
-                if (IsDateInRange(date, startDate, endDate))
+                if (InDateRange(date, startDate, endDate))
                 {
                     return sign.Key;
                 }
@@ -189,13 +189,13 @@ namespace BirthdayCalc
                     Console.WriteLine("\nWelcome to the Birthday Calculator!\n");
 
                     // Have the user enter their birthday with their birth year, month, and day
-                    Console.WriteLine("Please enter your birth year:");
+                    Console.Write("Please enter your birth year: ");
                     int year = int.Parse(Console.ReadLine());
 
-                    Console.WriteLine("Please enter your birth month:");
+                    Console.Write("Please enter your birth month: ");
                     int month = int.Parse(Console.ReadLine());
 
-                    Console.WriteLine("Please enter your birth day:");
+                    Console.Write("Please enter your birth day: ");
                     int day = int.Parse(Console.ReadLine());
 
                     // Calculate the user's age
@@ -212,13 +212,15 @@ namespace BirthdayCalc
                     string conclusion = Birthdate.Conclude(result, years, months, days);
                     Console.WriteLine(conclusion);
 
+                    // If the birthday is valid:
                     if (result == 1)
                     {
-                        // Check if it's the user's birthday. If it is, wish them happy birthday
+                        // Check if it's the user's birthday
                         bool birthday = Birthdate.Birthday(year, month, day);
 
                         if (birthday)
                         {
+                            // If it is the user's birthday, wish them a happy birthday
                             string birthday_msg = "Happy Birthday!!!";
                             Console.WriteLine(birthday_msg);
                         }
@@ -233,6 +235,7 @@ namespace BirthdayCalc
                         Console.WriteLine($"Chinese Zodiac Sign: {chinese_sign}");
                     }
 
+                    // End the loop once a valid date is entered
                     valid_date = true;
                 }
                 catch (Exception ex)
