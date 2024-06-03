@@ -2,15 +2,17 @@
 
 namespace HW4
 {
-    public class HW4Main
+    public class HW4Methods
     {
         static void Text(int integer, string text)
         {
+            // Print out what the integer and string that the user entered was
             Console.WriteLine($"\nThe integer is {integer}, and the string is '{text}'.\n\n");
         }
 
         static string Age_Description(int age)
         {
+            // Categorize the user's age, and return a description based on the category
             string conclusion = "";
             if (age >= 0 && age < 2)
             {
@@ -50,6 +52,8 @@ namespace HW4
 
         static void Swap(ref int a, ref int b)
         {
+            // Swap the two given integers
+
             int temp = a;
             a = b;
             b = temp;
@@ -57,6 +61,8 @@ namespace HW4
 
         static int Fibonacci(int n)
         {
+            // Calculate the nth number in the fibonacci sequence
+
             if (n <= 1)
             {
                 return n;
@@ -76,6 +82,7 @@ namespace HW4
 
         static bool IsPrime(int n)
         {
+            // Determine if n is prime
             if (n <= 1)
             {
                 return false;
