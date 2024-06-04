@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HW7
+namespace HW8
 {
 
     public class Fraction
