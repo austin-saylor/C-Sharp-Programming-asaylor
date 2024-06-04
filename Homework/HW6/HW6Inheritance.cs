@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HW5
+namespace HW6
 {
     public class People
     {
