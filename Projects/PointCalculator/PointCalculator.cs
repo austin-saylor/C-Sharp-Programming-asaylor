@@ -63,8 +63,9 @@ namespace PointCalc
 
             Point newPoint = new Point(0, 0);
 
-            newX = A.X * B.X;
-            newY = A.Y * B.Y;
+            // (A, B) * (C, D) = ((A*C-B*D), (A*C+B*D))
+            newX = ((A.X * B.X) - (A.Y * B.Y));
+            newY = ((A.X * B.X) + (A.Y * B.Y));
 
             newPoint.X = newX;
             newPoint.Y = newY;
@@ -132,7 +133,7 @@ namespace PointCalc
             mult_factor.PrintPoint(); // Output = (5, 10)
 
             Console.WriteLine($"\n{point1} * {point2}:");
-            mult_points.PrintPoint(); // Output = (5, 12)
+            mult_points.PrintPoint(); // Output = (-7, 17)
 
             Console.WriteLine($"\n{point1} == {point2}:");
             Console.WriteLine(equality.ToString()); // False
