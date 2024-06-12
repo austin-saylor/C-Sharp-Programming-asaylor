@@ -13,17 +13,17 @@ namespace HW9
     public class Mars : IPlanet
     {
         // Define the 'IPlanet' methods in the context of Mars
-        void IPlanet.Name()
+        void Name()
         {
             Console.WriteLine("The name of the planet is 'Mars'.");
         }
 
-        void IPlanet.Classification()
+        void Classification()
         {
             Console.WriteLine("The planet is classified as a Rocky Planet.");
         }
 
-        void IPlanet.Distance()
+        void Distance()
         {
             Console.WriteLine("It is the 4th planet from the sun.");
         }
