@@ -29,7 +29,7 @@ namespace HW9
         }
     }
 
-    class Program
+    class HW9Interfaces
     {
         static void Main(string[] args)
         {

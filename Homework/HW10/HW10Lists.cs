@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace HW10
 {
-    class Program
+    class HW10Lists
     {
         // Initialize the lists
         static List<int> IntList = new List<int>();
@@ -20,7 +20,7 @@ namespace HW10
         static void PrintList<T>(List<T> list)
         {
             // Print the given list
-            
+
             Console.Write("[");
 
             foreach (T item in list)
