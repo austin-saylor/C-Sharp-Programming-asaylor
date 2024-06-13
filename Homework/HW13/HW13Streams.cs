@@ -11,8 +11,8 @@ namespace HW13
             Console.WriteLine("Files and Streams Demo: \n");
 
             // Define the paths to the original and new files
-            string originalFilePath = "original.txt";
-            string newFilePath = "new.txt";
+            string originalFilePath = "files/original.txt";
+            string newFilePath = "files/new.txt";
 
             // Write to the original file
             using (StreamWriter sw = new StreamWriter(originalFilePath))
@@ -23,7 +23,7 @@ namespace HW13
                 sw.WriteLine("Sincerely, Austin.");
             }
 
-            Console.WriteLine($"Original file created at {originalFilePath}");
+            Console.WriteLine($"Original file created at '{originalFilePath}'");
 
             // Read the original file content
             string fileContent;
@@ -52,7 +52,7 @@ namespace HW13
                 }
             }
 
-            Console.WriteLine($"Manipulated file created at {newFilePath}");
+            Console.WriteLine($"Manipulated file created at '{newFilePath}'");
         }
     }
 }
