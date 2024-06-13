@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace HW11
 {
-    class HW11Collections
+    public class HW11Collections
     {
         // Initialize the the collections
         static Dictionary<string, string> dict = new Dictionary<string, string>();
@@ -15,7 +15,7 @@ namespace HW11
             // Method to dequeue items, taking into account empty queues
             if (queue.Count > 0)
             {
-                string removed_item = queue.Dequeue();
+                string removedItem = queue.Dequeue();
             }
             else
             {

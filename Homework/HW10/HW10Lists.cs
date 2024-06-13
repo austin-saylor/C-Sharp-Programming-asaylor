@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace HW10
 {
-    class HW10Lists
+    public class HW10Lists
     {
         // Initialize the lists
         static List<int> IntList = new List<int>();

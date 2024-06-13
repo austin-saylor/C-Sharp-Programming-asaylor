@@ -11,7 +11,7 @@ namespace HW12
         }
     }
 
-    class HW12Exceptions
+    public class HW12Exceptions
     {
         static void ThrowCustomException(string msg)
         {
