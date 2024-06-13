@@ -3,7 +3,7 @@ using System.IO;
 
 namespace HW13
 {
-    class HW13Streams
+    public class HW13Streams
     {
         static void Main(string[] args)
         {
@@ -14,7 +14,7 @@ namespace HW13
             string originalFilePath = "original.txt";
             string newFilePath = "new.txt";
 
-            // Create the original file, and write text to it
+            // Write to the original file
             using (StreamWriter sw = new StreamWriter(originalFilePath))
             {
                 sw.WriteLine("Hello, everyone!");
