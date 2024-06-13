@@ -102,7 +102,7 @@ namespace CustomerMgmt
         // Override the ToString method
         public override string ToString()
         {
-            // format the customer data into a string
+            // Format the customer data into a string
             string lName = GetLastName();
             string fName = GetFirstName();
             string id = GetID();
@@ -151,8 +151,25 @@ namespace CustomerMgmt
                     List<string> customerInfo = new List<string>(line.Split(new string[] { ", " }, StringSplitOptions.None));
                     if (customerInfo.Count == 5)
                     {
-                        Customer customer = new Customer(customerInfo[0], customerInfo[1], int.Parse(customerInfo[2]), customerInfo[3], customerInfo[4]);
-                        customers.Add(customer);
+                        Customer newCustomer = new Customer(customerInfo[0], customerInfo[1], int.Parse(customerInfo[2]), customerInfo[3], customerInfo[4]);
+
+                        // Check for duplicate customer IDs
+                        bool isDuplicate = false;
+                        foreach (var customer in customers)
+                        {
+                            if (newCustomer.CompareTo(customer) == 0)
+                            {
+                                // If the ID is a duplicate of an existing one, skip adding it
+                                isDuplicate = true;
+                                break;
+                            }
+                        }
+
+                        if (!isDuplicate)
+                        {
+                            // If it is not a duplicate ID, proceed with adding it to the list
+                            customers.Add(newCustomer);
+                        }
                     }
                 }
             }
@@ -166,7 +183,7 @@ namespace CustomerMgmt
                     sw.WriteLine(); // Write an empty line
                 }
             }
-            
+
             // End the program with a finish statement
             Console.WriteLine($"All customer data has been organized! It has been written to '{outputFilePath}'");
         }
