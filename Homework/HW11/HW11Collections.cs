@@ -23,6 +23,33 @@ namespace HW11
             }
         }
 
+        static void PrintDictionary()
+        {
+            // Method to print the dictionary collection
+            foreach (var pair in dict)
+            {
+                Console.WriteLine($"Item: {pair.Key},  Category: {pair.Value}");
+            }
+        }
+
+        static void PrintQueue()
+        {
+            // Method to print the queue collection
+            foreach (var item in queue)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
+        static void PrintStack()
+        {
+            // Method to print the stack collection
+            foreach (var item in stack)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
         static void Main(string[] args)
         {
             // Start the program
@@ -96,33 +123,6 @@ namespace HW11
 
             Console.WriteLine("\nStack contents:");
             PrintStack();
-        }
-
-        static void PrintDictionary()
-        {
-            // Method to print the dictionary collection
-            foreach (var pair in dict)
-            {
-                Console.WriteLine($"Item: {pair.Key},  Category: {pair.Value}");
-            }
-        }
-
-        static void PrintQueue()
-        {
-            // Method to print the queue collection
-            foreach (var item in queue)
-            {
-                Console.WriteLine(item);
-            }
-        }
-
-        static void PrintStack()
-        {
-            // Method to print the stack collection
-            foreach (var item in stack)
-            {
-                Console.WriteLine(item);
-            }
         }
     }
 }
