@@ -14,37 +14,41 @@ namespace HW13
             string originalFilePath = "original.txt";
             string newFilePath = "new.txt";
 
-            // Create and write to the original file
-            using (StreamWriter writer = new StreamWriter(originalFilePath))
+            // Create the original file, and write text to it
+            using (StreamWriter sw = new StreamWriter(originalFilePath))
             {
-                // Write text to the original file. In this case, a message with spelling/grammar errors
-                writer.WriteLine("Hello, everywon!");
-                writer.WriteLine("This iz a messig from me 2 u abowt how mutch I appreshiate ur work.");
-                writer.WriteLine("Thank u 4 being the best cowerkers that 1 can have.");
-                writer.WriteLine("Sinserely, Austin.");
+                sw.WriteLine("Hello, everyone!");
+                sw.WriteLine("This is a message from me to you about how much I appreciate your work.");
+                sw.WriteLine("Thank you for being the best coworkers that one can have.");
+                sw.WriteLine("Sincerely, Austin.");
             }
 
             Console.WriteLine($"Original file created at {originalFilePath}");
 
             // Read the original file content
             string fileContent;
-            using (StreamReader reader = new StreamReader(originalFilePath))
+            using (StreamReader sr = new StreamReader(originalFilePath))
             {
-                fileContent = reader.ReadToEnd();
+                fileContent = sr.ReadToEnd();
             }
 
             // Manipulate the data using StringReader, and write it to the new file
-            using (StringReader stringReader = new StringReader(fileContent))
+            using (StringReader sr = new StringReader(fileContent))
             {
-                using (StreamWriter writer = new StreamWriter(newFilePath))
+                using (StreamWriter sw = new StreamWriter(newFilePath))
                 {
-                    string line;
-                    while ((line = stringReader.ReadLine()) != null)
+                    string? line;
+                    do
                     {
-                        // Manipulate the data (e.g., convert to uppercase)
-                        string manipulatedLine = line.ToUpper();
-                        writer.WriteLine(manipulatedLine);
-                    }
+                        // Manipulate the data (in this case, convert to uppercase)
+                        line = sr.ReadLine();
+                        string manipulatedLine = "";
+                        if (line != null)
+                        {
+                            manipulatedLine = line.ToUpper();
+                        }
+                        sw.WriteLine(manipulatedLine);
+                    } while (line != null);
                 }
             }
 
