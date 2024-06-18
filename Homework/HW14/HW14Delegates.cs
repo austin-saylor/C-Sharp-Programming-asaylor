@@ -31,17 +31,24 @@ public class DelegateTypes
         Console.WriteLine($"{result} was the result of that addition operation.");
     }
 
-    public static void ActionDemo()
+    public static void ActionDemo(string line)
     {
-        Action<string> PrintMessage = message => Console.WriteLine(message);
-        PrintMessage("Hello from Action!");
+        Console.WriteLine($"Action: {line}");
     }
 
-    public static void PredicateDemo()
+    public static bool PredicateDemo(int num)
     {
-        Predicate<int> IsEven = number => number % 2 == 0;
-        bool result = IsEven(4);
-        Console.WriteLine($"Predicate result: {result}");
+        bool result = (num % 10 == 0);
+        Console.WriteLine($"\nPredicate result: {result}");
+        if (result == false)
+        {
+            Console.WriteLine($"The given number is not divisible by 10.");
+        }
+        else
+        {
+            Console.WriteLine($"The given number is divisible by 10.");
+        }
+        return result;
     }
 }
 
@@ -50,7 +57,8 @@ public class Program
     public static void Main(string[] args)
     {
         // Start the program
-        Console.WriteLine("Circle Calculation Demo:\n");
+        Console.WriteLine("Delegates Demo:\n");
+        Console.WriteLine("Circle Calculations:\n");
 
         // Define the multi-cast delegate
         CircleCalc calculate = new CircleCalc();
@@ -59,16 +67,16 @@ public class Program
 
         // Ask the user for a radius
         double radius = 0;
-        bool isValidInput = false;
+        bool isValidDouble = false;
 
-        while (!isValidInput)
+        while (!isValidDouble)
         {
             Console.Write("Please enter a radius: ");
             string userInput = Console.ReadLine();
 
             if (double.TryParse(userInput, out radius))
             {
-                isValidInput = true;
+                isValidDouble = true;
             }
             else
             {
@@ -79,13 +87,37 @@ public class Program
         // Use the delegate to call the calculation methods using the given radius
         circleDelegate(radius);
 
+        // Transition to demonstrating built-in Delegate Types:
+        Console.WriteLine("\n\nBuilt-In Types Demo:");
+
         // Func Example
         DelegateTypes.FuncDemo();
 
         // Action Example
-        DelegateTypes.ActionDemo();
+        Action<string> PrintMessage = DelegateTypes.ActionDemo;
+        Console.Write("\nPlease enter a string to be used in the Action Demo: ");
+        string line = Console.ReadLine();
+        PrintMessage(line);
 
         // Predicate Example
-        DelegateTypes.PredicateDemo();
+        Predicate<int> DivisibleByTen = DelegateTypes.PredicateDemo;
+        int num = 0;
+        bool isValidInt = false;
+
+        while (!isValidInt)
+        {
+            Console.Write("\nPlease enter a number to be used for the Predicate Demo: ");
+            string userInput = Console.ReadLine();
+
+            if (int.TryParse(userInput, out num))
+            {
+                isValidInt = true;
+            }
+            else
+            {
+                Console.WriteLine("The input is not a valid integer. Please try again.");
+            }
+        }
+        DivisibleByTen(num);
     }
 }
