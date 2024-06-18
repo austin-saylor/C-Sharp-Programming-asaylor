@@ -1,91 +1,91 @@
 ﻿using System;
 
 // CircleCalculations class to calculate area and circumference of a circle
-public class CircleCalculations
+public class CircleCalc
 {
-    public double CalculateArea(double radius)
+    public void CircleArea(double radius)
     {
         double area = Math.PI * radius * radius;
-        Console.WriteLine($"Area: {area}");
-        return area;
+        area = Math.Round(area, 2);
+        Console.WriteLine($"\nArea = {area}");
     }
 
-    public double CalculateCircumference(double radius)
+    public void Circumference(double radius)
     {
         double circumference = 2 * Math.PI * radius;
-        Console.WriteLine($"Circumference: {circumference}");
-        return circumference;
+        circumference = Math.Round(circumference, 2);
+        Console.WriteLine($"Circumference = {circumference}");
     }
 }
 
 // Delegate to handle circle calculations
 public delegate void CircleDelegate(double radius);
 
-// Func example class
-public class FuncExample
+public class DelegateTypes
 {
-    public Func<int, int, int> Add = (a, b) => a + b;
-
-    public void ShowFuncExample()
+    public static void FuncDemo()
     {
+        Func<int, int, int> Add = (a, b) => a + b;
         int result = Add(3, 4);
-        Console.WriteLine($"Func result: {result}");
+        Console.WriteLine($"\nFunc: 3 + 4 = {result}");
+        Console.WriteLine($"{result} was the result of that addition operation.");
     }
-}
 
-// Action example class
-public class ActionExample
-{
-    public Action<string> PrintMessage = message => Console.WriteLine(message);
-
-    public void ShowActionExample()
+    public static void ActionDemo()
     {
+        Action<string> PrintMessage = message => Console.WriteLine(message);
         PrintMessage("Hello from Action!");
     }
-}
 
-// Predicate example class
-public class PredicateExample
-{
-    public Predicate<int> IsEven = number => number % 2 == 0;
-
-    public void ShowPredicateExample()
+    public static void PredicateDemo()
     {
+        Predicate<int> IsEven = number => number % 2 == 0;
         bool result = IsEven(4);
         Console.WriteLine($"Predicate result: {result}");
     }
 }
 
-// Main program class
 public class Program
 {
     public static void Main(string[] args)
     {
-        // CircleCalculations Example
-        CircleCalculations calculations = new CircleCalculations();
-        CircleDelegate circleDelegate = calculations.CalculateArea;
-        circleDelegate += calculations.CalculateCircumference;
-        ExecuteDelegate(circleDelegate, 5.0);
+        // Start the program
+        Console.WriteLine("Circle Calculation Demo:\n");
+
+        // Define the multi-cast delegate
+        CircleCalc calculate = new CircleCalc();
+        CircleDelegate circleDelegate = calculate.CircleArea;
+        circleDelegate += calculate.Circumference;
+
+        // Ask the user for a radius
+        double radius = 0;
+        bool isValidInput = false;
+
+        while (!isValidInput)
+        {
+            Console.Write("Please enter a radius: ");
+            string userInput = Console.ReadLine();
+
+            if (double.TryParse(userInput, out radius))
+            {
+                isValidInput = true;
+            }
+            else
+            {
+                Console.WriteLine("The input is not a valid double. Please try again.");
+            }
+        }
+
+        // Use the delegate to call the calculation methods using the given radius
+        circleDelegate(radius);
 
         // Func Example
-        FuncExample funcExample = new FuncExample();
-        funcExample.ShowFuncExample();
+        DelegateTypes.FuncDemo();
 
         // Action Example
-        ActionExample actionExample = new ActionExample();
-        actionExample.ShowActionExample();
+        DelegateTypes.ActionDemo();
 
         // Predicate Example
-        PredicateExample predicateExample = new PredicateExample();
-        predicateExample.ShowPredicateExample();
-    }
-
-    public static void ExecuteDelegate(CircleDelegate circleDelegate, double radius)
-    {
-        foreach (CircleDelegate singleDelegate in circleDelegate.GetInvocationList())
-        {
-            var result = singleDelegate.Method.Invoke(singleDelegate.Target, new object[] { radius });
-            Console.WriteLine($"{singleDelegate.Method.Name} result: {result}");
-        }
+        DelegateTypes.PredicateDemo();
     }
 }
