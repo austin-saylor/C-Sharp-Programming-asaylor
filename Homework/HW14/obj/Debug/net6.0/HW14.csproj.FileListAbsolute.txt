@@ -1,0 +1,5 @@
+/home/asaylor/Projects/CSCI310-ajsaylor/Homework/HW14/obj/Debug/net6.0/HW14.csproj.AssemblyReference.cache
+/home/asaylor/Projects/CSCI310-ajsaylor/Homework/HW14/obj/Debug/net6.0/HW14.GeneratedMSBuildEditorConfig.editorconfig
+/home/asaylor/Projects/CSCI310-ajsaylor/Homework/HW14/obj/Debug/net6.0/HW14.AssemblyInfoInputs.cache
+/home/asaylor/Projects/CSCI310-ajsaylor/Homework/HW14/obj/Debug/net6.0/HW14.AssemblyInfo.cs
+/home/asaylor/Projects/CSCI310-ajsaylor/Homework/HW14/obj/Debug/net6.0/HW14.csproj.CoreCompileInputs.cache
