@@ -37,7 +37,7 @@ public class DelegateTypes
     public static void ActionDemo(string line)
     {
         // Method to demonstrate the 'Action' delegate type
-        Console.WriteLine($"Action: {line}");
+        Console.WriteLine($"Action Result: {line}");
     }
 
     public static bool PredicateDemo(int num)
