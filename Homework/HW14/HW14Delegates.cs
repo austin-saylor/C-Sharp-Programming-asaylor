@@ -1,10 +1,11 @@
 ﻿using System;
 
-// CircleCalculations class to calculate area and circumference of a circle
+// CircleCalc class to calculate area and circumference of a circle
 public class CircleCalc
 {
     public void CircleArea(double radius)
     {
+        // Method to calculate the area of the circle
         double area = Math.PI * radius * radius;
         area = Math.Round(area, 2);
         Console.WriteLine($"\nArea = {area}");
@@ -12,6 +13,7 @@ public class CircleCalc
 
     public void Circumference(double radius)
     {
+        // Method to calculate the circumference of the circle
         double circumference = 2 * Math.PI * radius;
         circumference = Math.Round(circumference, 2);
         Console.WriteLine($"Circumference = {circumference}");
@@ -23,23 +25,26 @@ public delegate void CircleDelegate(double radius);
 
 public class DelegateTypes
 {
-    public static void FuncDemo()
+    public static string FuncDemo(string line)
     {
-        Func<int, int, int> Add = (a, b) => a + b;
-        int result = Add(3, 4);
-        Console.WriteLine($"\nFunc: 3 + 4 = {result}");
-        Console.WriteLine($"{result} was the result of that addition operation.");
+        if (string.IsNullOrEmpty(line))
+            return line;
+
+        string result = line.ToUpper();
+        return $"Func Result: {result}";
     }
 
     public static void ActionDemo(string line)
     {
+        // Method to demonstrate the 'Action' delegate type
         Console.WriteLine($"Action: {line}");
     }
 
     public static bool PredicateDemo(int num)
     {
+        // Method to demonstrate the 'Predicate' delegate type
         bool result = (num % 10 == 0);
-        Console.WriteLine($"\nPredicate result: {result}");
+        Console.WriteLine($"\nPredicate Result: {result}");
         if (result == false)
         {
             Console.WriteLine($"The given number is not divisible by 10.");
@@ -91,13 +96,16 @@ public class Program
         Console.WriteLine("\n\nBuilt-In Types Demo:");
 
         // Func Example
-        DelegateTypes.FuncDemo();
+        Func<string, string> Cap = DelegateTypes.FuncDemo;
+        Console.Write("\nPlease enter a string to be used in the Func Demo: ");
+        string func_line = Console.ReadLine();
+        Console.WriteLine(Cap(func_line));
 
         // Action Example
         Action<string> PrintMessage = DelegateTypes.ActionDemo;
         Console.Write("\nPlease enter a string to be used in the Action Demo: ");
-        string line = Console.ReadLine();
-        PrintMessage(line);
+        string action_line = Console.ReadLine();
+        PrintMessage(action_line);
 
         // Predicate Example
         Predicate<int> DivisibleByTen = DelegateTypes.PredicateDemo;
