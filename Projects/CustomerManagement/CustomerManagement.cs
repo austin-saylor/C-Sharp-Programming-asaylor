@@ -121,7 +121,7 @@ namespace CustomerMgmt
         }
     }
 
-    public class Program
+    public class CustomerManagement
     {
         static void Main(string[] args)
         {
