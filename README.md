@@ -1,5 +1,5 @@
 # C# Programming - asaylor
-## Austin Saylor, Summer 2024
+Austin Saylor, Summer 2024
 
 This repository contains the work I did for a course on C# programming. In this course, I used the dotnet framework to solve various problems that were provided by the instructor.
 
