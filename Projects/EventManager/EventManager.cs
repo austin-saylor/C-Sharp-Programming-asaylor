@@ -235,7 +235,7 @@ namespace EventManager
             {
                 new Customer("Austin Saylor", "austin@yalor.com", "(472) 586-9099"),
                 new Customer("Bob Barley", "bob@barley.com", "(808) 804-1399"),
-                new Customer("Charlie Cheese", "charlie@cheese.com", "(780) 411-3733"),
+                new Customer("Charlie Peterson", "charlie@peterson.com", "(780) 411-3733"),
                 new Customer("Jacob Johnson", "jake@johnny.com", "(707) 057-0845"),
                 new Customer("Landon Lambert", "landon@lambert.com", "(104) 904-1035"),
                 new Customer("Becky Thompson", "becky@tom.com", "(837) 597-8039"),

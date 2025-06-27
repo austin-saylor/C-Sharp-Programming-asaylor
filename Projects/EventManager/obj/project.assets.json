@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/asaylor/Projects/CSCI310-ajsaylor/Projects/EventManager/EventManager.csproj",
+      "projectUniqueName": "/home/asaylor/College-GitRepos/C-Sharp-Programming-asaylor/Projects/EventManager/EventManager.csproj",
       "projectName": "EventManager",
-      "projectPath": "/home/asaylor/Projects/CSCI310-ajsaylor/Projects/EventManager/EventManager.csproj",
+      "projectPath": "/home/asaylor/College-GitRepos/C-Sharp-Programming-asaylor/Projects/EventManager/EventManager.csproj",
       "packagesPath": "/home/asaylor/.nuget/packages/",
-      "outputPath": "/home/asaylor/Projects/CSCI310-ajsaylor/Projects/EventManager/obj/",
+      "outputPath": "/home/asaylor/College-GitRepos/C-Sharp-Programming-asaylor/Projects/EventManager/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/asaylor/.nuget/NuGet/NuGet.Config"
@@ -58,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.128/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.136/RuntimeIdentifierGraph.json"
       }
     }
   }

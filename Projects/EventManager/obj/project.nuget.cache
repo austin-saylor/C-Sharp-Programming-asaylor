@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8QbIyiHTZzmS/E9sUxNrIm03Tz95pEWvyu39ax4xQTQyA3nWTuV91mrnu2zqi77OaGlhCR4yq8t2ZbHE0NK9GQ==",
+  "dgSpecHash": "VKBT+Vt0MexX9QQGX9yA3Q56ALDz/lLd+ZKuZGb/1g3+iM/sj0CZqsEYDxyYqt4vKmWenuSSYMlC70UAYh29oA==",
   "success": true,
-  "projectFilePath": "/home/asaylor/Projects/CSCI310-ajsaylor/Projects/EventManager/EventManager.csproj",
+  "projectFilePath": "/home/asaylor/College-GitRepos/C-Sharp-Programming-asaylor/Projects/EventManager/EventManager.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
