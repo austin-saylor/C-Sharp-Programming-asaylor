@@ -7,8 +7,8 @@ This repository contains the work I did for a course on C# programming. In this 
 
 ## Projects
 
-| Project    | Description                                   |                                                                       |
-| ------------- | --------------------------------------------- | ----------------------------------------------------------------------------------- |
+| Project    | Description                                   |
+| ------------- | --------------------------------------------- |
 | [HelloWorld]   | A basic hello world program in C#.             |  |
 | [Homework-1]    | Computes triangle area using Heron's formula. |  |
 | [Homework-2]    | Calculates tax based on user-provided income and prints shapes using an integer that determines size. |
