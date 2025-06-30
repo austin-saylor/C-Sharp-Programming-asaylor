@@ -3,7 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![Unlicense License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/austin-saylor-08b1a4209/]
 # C# Programming - Austin Saylor, Summer 2024
 
 This repository contains the work I did for a course on C# programming. In this course, I used the dotnet framework to solve various problems that were provided by the instructor.
