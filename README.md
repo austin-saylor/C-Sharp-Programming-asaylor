@@ -1,14 +1,13 @@
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![Unlicense License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/austin-saylor-08b1a4209/)
 # C# Programming - Austin Saylor, Summer 2024
 
 This repository contains the work I did for a course on C# programming. In this course, I used the dotnet framework to solve various problems that were provided by the instructor.
 
-| Assignment    | Description                                   | Link                                                                                |
+## Contact Information
+[LinkedIn]
+
+## Projects
+
+| Project    | Description                                   | Link                                                                                |
 | ------------- | --------------------------------------------- | ----------------------------------------------------------------------------------- |
 | Hello World   | A basic hello world program in C#             | https://github.com/austin-saylor/C-Sharp-Programming-asaylor/blob/main/HelloWorld/Hello.cs |
 | Homework 1    | Computes triangle area using Heron's formula. | https://github.com/austin-saylor/C-Sharp-Programming-asaylor/tree/main/Homework/HW1 |
@@ -31,3 +30,5 @@ This repository contains the work I did for a course on C# programming. In this 
 | Project 2: Point Calculator | A calculator for mathematical operations on cartesian points. | https://github.com/austin-saylor/C-Sharp-Programming-asaylor/tree/main/Projects/PointCalculator |
 | Project 3: Customer Management | Uses interfaces to manage a list of customers. | https://github.com/austin-saylor/C-Sharp-Programming-asaylor/blob/main/Projects/CustomerManagement/CustomerManagement.cs |
 | Project 4: Event Manager | Uses interfaces and asynchronous programming to manage customer orders. | https://github.com/austin-saylor/C-Sharp-Programming-asaylor/tree/main/Projects/EventManager |
+
+[LinkedIn]: https://www.linkedin.com/in/austin-saylor-08b1a4209/
