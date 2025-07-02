@@ -1,12 +1,10 @@
+[![language](https://img.shields.io/badge/language-C%23-239120)](https://learn.microsoft.com/ru-ru/dotnet/csharp/tour-of-csharp/overview)
 ![License](https://img.shields.io/badge/License-MIT-green)
 # C# Programming - Austin Saylor, Summer 2024
 
 This repository contains the work I did for a course on C# programming. In this course, I used the dotnet framework to solve various problems that were provided by the instructor.
 
-## Contact Information
-[LinkedIn]
-
-## Projects
+## 💻 Projects
 
 | Project    | Description                                   |
 | ------------- | --------------------------------------------- |
@@ -31,6 +29,9 @@ This repository contains the work I did for a course on C# programming. In this 
 | [Project-2_PointCalculator] | A calculator for mathematical operations on cartesian points.
 | [Project-3_CustomerManagement] | Uses interfaces to manage a list of customers. |
 | [Project-4_EventManager] | Uses interfaces and asynchronous programming to manage customer orders. |
+
+## 🗨️ Contact Information
+![LinkedIn](https://img.shields.io/badge/LinkedIn-007EBB)
 
 [LinkedIn]: https://www.linkedin.com/in/austin-saylor-08b1a4209/
 [HelloWorld]: https://github.com/austin-saylor/C-Sharp-Programming-asaylor/blob/main/HelloWorld/Hello.cs
