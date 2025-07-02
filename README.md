@@ -31,7 +31,7 @@ This repository contains the work I did for a course on C# programming. In this 
 | [Project-4_EventManager] | Uses interfaces and asynchronous programming to manage customer orders. |
 
 ## 🗨️ Contact Information
-![LinkedIn](https://img.shields.io/badge/LinkedIn-007EBB)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-007EBB)](https://www.linkedin.com/in/austin-saylor-08b1a4209/)
 
 [LinkedIn]: https://www.linkedin.com/in/austin-saylor-08b1a4209/
 [HelloWorld]: https://github.com/austin-saylor/C-Sharp-Programming-asaylor/blob/main/HelloWorld/Hello.cs
